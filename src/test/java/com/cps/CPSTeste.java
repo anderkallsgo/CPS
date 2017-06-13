@@ -458,6 +458,18 @@ public class CPSTeste {
         System.out.println("E-_= "+gabaritoEscalaDePersonalidadeComrey.calcularEscalaEMenos());
         System.out.println("M+_= "+gabaritoEscalaDePersonalidadeComrey.calcularEscalaMMais());
         System.out.println("P-_= "+gabaritoEscalaDePersonalidadeComrey.calcularEscalaPMenos());
+        //Aqui começa o calculo dos Valores das Escalas do Comrey
 
+        System.out.println("ESCALA T._="+gabaritoEscalaDePersonalidadeComrey.calcularEscalaTPonto());
+        System.out.println("ESCALA O._="+gabaritoEscalaDePersonalidadeComrey.calcularEscalaOPonto());
+        System.out.println("ESCALA C._="+gabaritoEscalaDePersonalidadeComrey.calcularEscalaCPonto());
+        System.out.println("ESCALA A._="+gabaritoEscalaDePersonalidadeComrey.calcularEscalaAPonto());
+        System.out.println("ESCALA S._="+gabaritoEscalaDePersonalidadeComrey.calcularEscalaSPonto());
+        System.out.println("ESCALA E._="+gabaritoEscalaDePersonalidadeComrey.calcularEscalaEPonto());
+        System.out.println("ESCALA M._="+gabaritoEscalaDePersonalidadeComrey.calcularEscalaMPonto());
+        System.out.println("ESCALA P._="+gabaritoEscalaDePersonalidadeComrey.calcularEscalaPPonto());
+        System.out.println();
+        System.out.println("ESCALA V._="+gabaritoEscalaDePersonalidadeComrey.calcularEscalaVPonto());
+        System.out.println("ESCALA R._="+gabaritoEscalaDePersonalidadeComrey.calcularEscalaRPonto());
     }
 }

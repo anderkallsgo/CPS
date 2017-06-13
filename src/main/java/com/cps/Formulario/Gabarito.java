@@ -12,15 +12,7 @@ public class Gabarito {
         this.nome = nome;
     }
     public void adicionar(Resposta resposta) {
-
         this.resposta.add(resposta);
-    }
-    public int calcularResultado() {
-        int total = 0;
-        for (Resposta resposta : resposta){
-            total += resposta.getEscala().getValor();
-        }
-        return total;
     }
 
     public int calcularEscalaTMais() {
@@ -55,7 +47,7 @@ public class Gabarito {
             escalaAMenos = resposta.get(3).getEscala().getValor() + resposta.get(23).getEscala().getValor()
                     + resposta.get(43).getEscala().getValor() + resposta.get(63).getEscala().getValor()
                     + resposta.get(83).getEscala().getValor();
-        }return 0;
+        }return escalaAMenos;
     }
 
     public int calcularEscalaSMenos() {
@@ -165,5 +157,89 @@ public class Gabarito {
                     + resposta.get(58).getEscala().getValor() + resposta.get(78).getEscala().getValor()
                     + resposta.get(98).getEscala().getValor();
         }return escalaPMenos;
+    }
+
+    public int calcularEscalaTPonto() {
+        int escalaTPonto = (40 - calcularEscalaTMenos()) + calcularEscalaTMais();
+        return escalaTPonto;
+    }
+
+    public int calcularEscalaOPonto() {
+        int escalaOPonto = (40 - calcularEscalaOMenos() + calcularEscalaOMais());
+        return escalaOPonto;
+    }
+
+    public int calcularEscalaCPonto() {
+        int escalaCPonto = (40 - calcularEscalaCMenos() + calcularEscalaCMais());
+        return escalaCPonto;
+    }
+
+    public int calcularEscalaAPonto() {
+        int escalaAPonto = (40 - calcularEscalaAMenos() + calcularEscalaAMais());
+        return escalaAPonto;
+    }
+
+    public int calcularEscalaSPonto() {
+        int escalaSPonto = (40 - calcularEscalaSMenos() + calcularEscalaSMais());
+        return escalaSPonto;
+    }
+
+    public int calcularEscalaEPonto() {
+        int escalaEPonto = (40 - calcularEscalaEMenos() + calcularEscalaEMais());
+        return escalaEPonto;
+    }
+
+    public int calcularEscalaMPonto() {
+        int escalaMPonto = (40 - calcularEscalaMMenos() + calcularEscalaMMais());
+        return escalaMPonto;
+    }
+
+    public int calcularEscalaPPonto() {
+        int escalaPPonto = (40 - calcularEscalaPMenos()+ calcularEscalaPMais());
+        return escalaPPonto;
+    }
+
+    public int calcularEscalaVPonto() {
+        int escalaVPonto = (32 - calcularEscalaVMais() + calcularEscalaVMenos());
+        return escalaVPonto;
+    }
+
+    private int calcularEscalaVMenos() {
+        int escalaVMenos = 0;
+        for (int i = 0; i < resposta.size(); i++) {
+            escalaVMenos = resposta.get(14).getEscala().getValor() + resposta.get(34).getEscala().getValor()
+                    + resposta.get(74).getEscala().getValor() + resposta.get(94).getEscala().getValor();
+        }return escalaVMenos;
+    }
+
+    private int calcularEscalaVMais() {
+        int escalaVMais = 0;
+        for (int i = 0; i < resposta.size(); i++) {
+            escalaVMais = resposta.get(4).getEscala().getValor() + resposta.get(24).getEscala().getValor()
+                    + resposta.get(64).getEscala().getValor() + resposta.get(84).getEscala().getValor();
+        }return escalaVMais;
+    }
+
+    public int calcularEscalaRPonto() {
+        int escalaRPonto = (48 - calcularEscalaRMenos() + calcularEscalaRMais());
+        return escalaRPonto;
+    }
+
+    private int calcularEscalaRMais() {
+        int escalaRMais = 0;
+        for (int i = 0; i < resposta.size(); i++) {
+            escalaRMais = resposta.get(19).getEscala().getValor() + resposta.get(39).getEscala().getValor()
+                    + resposta.get(44).getEscala().getValor() + resposta.get(59).getEscala().getValor()
+                    + resposta.get(79).getEscala().getValor()+ resposta.get(99).getEscala().getValor();
+        }return escalaRMais;
+    }
+
+    private int calcularEscalaRMenos() {
+        int escalaRMenos = 0;
+        for (int i = 0; i < resposta.size(); i++) {
+            escalaRMenos = resposta.get(9).getEscala().getValor() + resposta.get(29).getEscala().getValor()
+                    + resposta.get(49).getEscala().getValor() + resposta.get(54).getEscala().getValor()
+                    + resposta.get(69).getEscala().getValor()+ resposta.get(89).getEscala().getValor();
+        }return escalaRMenos;
     }
 }
